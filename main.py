@@ -2,8 +2,8 @@
 
 # Press ⌃R to execute it or replace it with your code.
 # Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
-import main
-
+#import main
+#print("the code is looping")
 #Data is a list [] with a nested list that contains a string, list[], string.  eg ["string", ["a","b", "c"], "string"]]
 trivia = [
 ['\nWho ate the "Chop-Chop" devil fruit?', ["A. Bon Clay", "B. Buggy the Clown", "C. Daz Bones", "D. Clawador"], "B"],
@@ -47,23 +47,26 @@ def trivia_stack(myList):
     print(f"\nSorry, that is incorrect. The answer is {answer}")
   print("your score is", main.score)
 
-
+def return_score(innerScore):
+  #the game ended, let the user know about their overall score
+  print("\n*\n*\n*\n*")
+  if innerScore > 0 & innerScore <50:
+    print("Your score is ",innerScore, ". Not bad but you should watch more One Piece")
+  elif innerScore > 50 & innerScore <80:
+    print("Your score is ",innerScore, ". You did pretty good but you should watch more One Piece")
+  elif innerScore > 80 & innerScore <100:
+    print("Your score is ",innerScore, ". Awesome job!")
+  elif innerScore == 110:
+    print("Your score is ",innerScore, ". You did perfect. Maybe you watch too much One Piece")
 
 
 for triv in trivia:
-  trivia_stack(triv)
+  #trivia_stack(triv)
+  print(triv)
+
+return_score(score)
 
 
-
-#the game ended, let the user know about their overall score
-if score > 0 & score <50:
-  print("Your score is ",score, ". Not bad but you should watch more One Piece")
-elif score > 50 & score <80:
-  print("Your score is ",score, ". You did pretty good but you should watch more One Piece")
-elif score > 80 & score <100:
-  print("Your score is ",score, ". Awesome job!")
-elif score == 110:
-  print("Your score is ",score, ". You did perfect. Maybe you watch too much One Piece")
 
 
 
